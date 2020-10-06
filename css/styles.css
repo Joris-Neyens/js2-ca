@@ -1,0 +1,30 @@
+
+body {
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+}
+.container {
+    width: 70%;
+}
+.book {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+margin: 15px;
+}
+.navbar {
+    padding: 0;
+    height: 70px;
+    background-color: white;
+}
+h1 {
+    margin: 55px 0 40px 0px;
+    font-size:  2rem;
+}
+#no-favorites {
+    margin: 15px 15px;
+    color: rgb(191, 80, 80);
+}
+.form-control {
+    margin-left: 15px;
+}
