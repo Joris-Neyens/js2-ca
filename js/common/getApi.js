@@ -14,9 +14,8 @@ export function getApi() {
       makeHtml(json);
       searchTitle(json);
 
-
     } catch (error) {
-      console.log(error);
+      console.log("error", error);
     }
   })();
   
