@@ -1,8 +1,5 @@
 import {getApi} from "./common/getApi.js"
 import { selectFavorites } from "./utils/addFavorites.js";
-import {searchTitle} from "./utils/searchTitle.js"
-
-
 
 getApi()
 
@@ -31,12 +28,3 @@ export function makeHtml(array) {
   });
 }
 
-//removeall
-
-
-function removeAllFavorites() {
-
-  const removeButton = document.querySelector("remove-button")
-
-}
-removeAllFavorites()

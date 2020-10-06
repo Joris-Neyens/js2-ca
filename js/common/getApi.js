@@ -13,7 +13,6 @@ export function getApi() {
   
       makeHtml(json);
       searchTitle(json);
-      clearStorage(json);
 
 
     } catch (error) {

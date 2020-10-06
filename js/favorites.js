@@ -1,5 +1,7 @@
 import { getFavoritesArray } from "./utils/localStorage.js";
 import { removeFavorite } from "./utils/removeFavorites.js";
+import {clearFavorites} from "./utils/clearFavorites.js";
+
 
 const favoriteContainer = document.querySelector(".favorites-container");
 
@@ -34,15 +36,8 @@ export function favoriteHtml() {
 
 favoriteHtml();
 
-const removeButton = document.querySelector(".remove-button");
+clearFavorites() 
 
-removeButton.addEventListener("click", clearStorage) 
 
-function clearStorage() {
 
-  localStorage.clear();
-
-  favoriteHtml()
-
-}
 
