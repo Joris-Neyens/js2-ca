@@ -1,4 +1,4 @@
-import { makeHtml } from "../home.js";
+import { makeHtml } from "../../home.js";
 
 export function searchTitle(books) {
   const input = document.querySelector("input");

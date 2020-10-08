@@ -1,5 +1,5 @@
-import { getFavoritesArray } from "./localStorage.js";
-import { setFavorites } from "./localStorage.js";
+import { getFavoritesArray } from "../favorites/storeFavorites.js";
+import { setFavorites } from "../favorites/storeFavorites.js";
 
 
 export function selectFavorites() {

@@ -1,30 +1,35 @@
-const name = document.querySelector("#name");
-const password = document.querySelector("#password");
+import { formValidation } from "./utils/login/fomValidation.js";
+import { baseUrl } from "./common/baseUrl.js";
+import { saveToken, saveUser } from "./common/userStorage.js";
+
+//formvalidation
 const submit = document.querySelector(".login-button");
+submit.addEventListener("click", formValidation);
 
-submit.addEventListener("click", login);
+//login
+export async function login(name, password) {
+  const loginUrl = baseUrl + "auth/local";
 
-function login() {
+  const data = JSON.stringify({ identifier: name, password: password });
 
-    const nameWarning = document.querySelector("#name-warning")
-    const passwordWarning = document.querySelector("#password-warning")
+  const post = {
+    method: "POST",
+    body: data,
+    headers: {
+      "content-type": "application/json",
+    },
+  };
 
-    if(validate(name.value.trim(), 1)) {
-        nameWarning.style.display = "block"
-    } else {
-        nameWarning.style.display = "none"
+  try {
+    const response = await fetch(loginUrl, post);
+    const json = await response.json();
+
+    if (json.user) {
+      saveToken(json.jwt);
+      saveUser(json.user.username);
+      location.href = "/";
     }
-    
-    if(validate(password.value.trim(), 1)) {
-        passwordWarning.style.display= "block"
-    } else {
-        passwordWarning.style.display= "none"
-    }
+  } catch (error) {
+    console.log("error");
+  }
 }
-
-function validate(value, number) {
-    if(value.length < number) {
-        return true
-    }
-}
-

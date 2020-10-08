@@ -1,6 +1,8 @@
-import { makeHtml } from "../home.js";
 import {baseUrl} from "./baseUrl.js"
-import {searchTitle} from "../utils/searchTitle.js"
+import { makeHtml } from "../home.js";
+import {searchTitle} from "../utils/home/searchFunction.js"
+
+
 
 export function getApi() {
 
@@ -11,8 +13,10 @@ export function getApi() {
       const response = await fetch(booksUrl);
       const json = await response.json();
   
-      makeHtml(json);
       searchTitle(json);
+
+      makeHtml(json);
+      
 
     } catch (error) {
       console.log("error", error);

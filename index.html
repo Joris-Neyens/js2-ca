@@ -33,11 +33,13 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            
+        <div class="container">       
             <h1>Worlds most popular books</h1>
             <div class="row">
-                <input class="search form-control mr-sm-2 col-12 col-md-6 col-lg-4" type="search" placeholder="Search by title" aria-label="Search">
+                <input id="search-title"class="form-control mr-sm-2 col-12 col-md-5 col-lg-4" type="search" placeholder="Search by title" aria-label="Search">
+                <div id="add" class="col-12 col-md-5 offset-md-1 col-lg-4 offset-lg-1" style="display:none">
+                    <a href="addbook.html"><button type="button" class="login-button btn btn-primary">Add new book</button></a>
+                </div>
             </div>
             <div class="books-container row justify-content-between"></div>
         </div>

@@ -1,7 +1,5 @@
-import { getFavoritesArray } from "./utils/localStorage.js";
-import { removeFavorite } from "./utils/removeFavorites.js";
-import {clearFavorites} from "./utils/clearFavorites.js";
-
+import { getFavoritesArray } from "./utils/favorites/storeFavorites.js";
+import { removeFavorite, clearFavorites } from "./utils/favorites/removeFavorites.js";
 
 const favoriteContainer = document.querySelector(".favorites-container");
 

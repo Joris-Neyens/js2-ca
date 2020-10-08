@@ -26,7 +26,7 @@ h1 {
     margin: 15px 15px;
     color: rgb(191, 80, 80);
 }
-.search {
+#search-title {
     margin-left: 15px;
 }
 .login-form {
@@ -40,4 +40,16 @@ h1 {
 
 form p {
     color: red;
+}
+.admin-button {
+    margin: 0px;
+}
+.error {
+    border: 1px solid red;
+    text-align: center;
+}
+.success {
+    border: 1px solid green;
+    color: green;
+    text-align: center;
 }
